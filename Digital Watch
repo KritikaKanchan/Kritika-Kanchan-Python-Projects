@@ -1,0 +1,17 @@
+import tkinter as tk
+from time import strftime
+
+root = tk.Tk()
+root.title("Digital Watch")
+
+def time():
+    display = strftime('%H : %M : %S %p')
+    label.config(text=display)
+    label.after(1000,time)
+
+label = tk.Label(root, font=("Broadway", 70, 'bold'), background='black', foreground='white')
+label.pack(anchor='center')
+
+time()
+
+tk.mainloop()
