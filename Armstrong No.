@@ -1,0 +1,11 @@
+n=int(input("enter no."))
+l=len(str(n))
+a,b=n,0
+for i in range(l):
+    c=a%10
+    b=(c**l)+b
+    a=a//10
+if b==n:
+    print("armstrong no.")
+else:
+    print("not a armstrong no.")
